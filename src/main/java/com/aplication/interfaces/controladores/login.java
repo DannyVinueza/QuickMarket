@@ -24,7 +24,7 @@ public class login implements Initializable{
 
    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        /*Connection conBD = conexion.conecionBD(); // Obtención de la conexión a la base de datos
+        Connection conBD = conexion.conecionBD(); // Obtención de la conexión a la base de datos
         String consulta = "SELECT * FROM roles";
         try {
             Statement stm = conBD.createStatement();
@@ -51,7 +51,7 @@ public class login implements Initializable{
                     rolEscogido.setText("Cajero");
                 }
             }
-        });*/
+        });
     }
 
     public void ingresar(ActionEvent actionEvent) {

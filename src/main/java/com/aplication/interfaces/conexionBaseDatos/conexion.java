@@ -45,12 +45,12 @@ public class conexion implements ConectarBD {
         }
         return instancia;
     }
-    /*public static  Connection conecionBD(){
+    public static  Connection conecionBD(){
         Connection con = null;
         String nameBD = "quickmarket";
         String url = "jdbc:mysql://localhost:3306/" + nameBD;
         String user = "root";
-        String password = "Danny.2002";
+        String password = "UGPCUGR2002";
         try {
             con = DriverManager.getConnection(url, user, password);
             System.out.println("Conexión exitosa");
@@ -58,5 +58,5 @@ public class conexion implements ConectarBD {
             System.out.println("Error al conectar a la base de datos");
         }
         return con;
-    }*/
+    }
 }
