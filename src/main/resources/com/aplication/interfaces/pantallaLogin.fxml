@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aplication.interfaces.controladores.login">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="678.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aplication.interfaces.controladores.login">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="678.0" pickOnBounds="true">
+      <ImageView nodeOrientation="INHERIT" opacity="0.55" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@../../../../images/img.png" />
+            <Image url="https://th.bing.com/th/id/R.07cdaf81070d00c5c83b0991a528fdc3?rik=1H6tNT4gZvfuhQ&amp;riu=http%3a%2f%2f4.bp.blogspot.com%2f-CIuG5MV0Boc%2fUZ_o2UKTJ8I%2fAAAAAAAAACA%2fXh21K9-ytGA%2fs1600%2fsupermarket-d9f48a.jpg&amp;ehk=nyYZUfCHeS3Z3FpepcS0sgJly2LY1VRz2zg4pp6qz6A%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" />
          </image>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
       </ImageView>
-      <AnchorPane layoutX="177.0" prefHeight="400.0" prefWidth="320.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="177.0" prefHeight="400.0" prefWidth="318.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="198.0" layoutY="258.0" text="¿Olvidaste tu contraseña?" textFill="#f1f1f1">
                <font>
