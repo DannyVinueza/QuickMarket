@@ -1,22 +1,23 @@
 CREATE DATABASE quickmarket;
 USE quickmarket;
 
-CREATE TABLE `quickmarket`.`roles` (
-  `idroles` INT NOT NULL,
-  `nombres` VARCHAR(45) NOT NULL,
+  CREATE TABLE `quickmarket`.`roles` (
+  `idroles` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombres` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`idroles`));
+
   
-INSERT INTO `quickmarket`.`roles` (`idroles`, `nombres`) VALUES ('11', 'Administrador');
-INSERT INTO `quickmarket`.`roles` (`idroles`, `nombres`) VALUES ('12', 'Cajero');
+INSERT INTO `quickmarket`.`roles` (`nombres`) VALUES ('Administrador');
+INSERT INTO `quickmarket`.`roles` (`nombres`) VALUES ('Cajero');
 
 CREATE UNIQUE INDEX roles_pk ON `roles` (`idroles`);
 
 CREATE TABLE `quickmarket`.`usuarios`(
-  `idusuario` INT NOT NULL,
-  `idroles` INT NULL,
+  `idusuario` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `idroles` INT UNSIGNED NOT NULL,
   `usuario` VARCHAR(25) NOT NULL,
   `contrasenia` VARCHAR(25) NOT NULL,
-  PRIMARY KEY (idusuario),
+  PRIMARY KEY (`idusuario`),
   CONSTRAINT FK_USUARIOS_TIENE_ROLES FOREIGN KEY (`idroles`) REFERENCES `roles` (`idroles`)
 );
 
@@ -24,10 +25,11 @@ CREATE UNIQUE INDEX USUARIOS_PK ON USUARIOS (`idusuario`);
 
 CREATE INDEX TIENE_FK ON USUARIOS (`idroles`);
 
-INSERT INTO `quickmarket`.`USUARIOS` (`idusuario`, `idroles`, `usuario`, `contrasenia`) VALUES ('1234', '11', 'danny', '1234');
-INSERT INTO `quickmarket`.`USUARIOS` (`idusuario`, `idroles`, `usuario`, `contrasenia`) VALUES ('1235', '12', 'carlos', '1212');
-INSERT INTO `quickmarket`.`USUARIOS` (`idusuario`, `idroles`, `usuario`, `contrasenia`) VALUES ('1236', '12', 'pedro', '1111');
+INSERT INTO `quickmarket`.`usuarios` (`idroles`, `usuario`, `contrasenia`) VALUES ('1', 'dannyV', '1234');
+INSERT INTO `quickmarket`.`usuarios` (`idroles`, `usuario`, `contrasenia`) VALUES ('2', 'danielQ', '1111');
+INSERT INTO `quickmarket`.`usuarios` (`idroles`, `usuario`, `contrasenia`) VALUES ('1', 'nestorC', '1211');
+INSERT INTO `quickmarket`.`usuarios` (`idroles`, `usuario`, `contrasenia`) VALUES ('2', 'joseP', '1122');
 
-DELETE FROM `prueba`.`USUARIOS` WHERE (`idusuario` = '1236');
+DELETE FROM `quickmarket`.`usuarios` WHERE (`idusuario` = '1');
 SELECT * FROM ROLES;
 SELECT * FROM USUARIOS;
